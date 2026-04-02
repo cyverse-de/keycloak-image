@@ -65,10 +65,11 @@ kcadm.sh set-password \
          --new-password "$KC_ADMIN_PASS" \
     || error_exit "unable to set password for $KC_ADMIN_USER"
 
-# Add the admin role to the new admin user.
+# Add the admin role to the new admin user. Note: the `--uusername` command-line option was used intentionally because
+# that's the spelling that's currently used by `kcadmin.sh`.
 kcadm.sh add-roles \
          -r master \
-         --username "$KC_ADMIN_USER" \
+         --uusername "$KC_ADMIN_USER" \
          --rolename admin \
     || error_exit "unable to add admin role to $KC_ADMIN_USER"
 
