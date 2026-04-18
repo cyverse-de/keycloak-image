@@ -13,5 +13,7 @@ RUN /opt/keycloak/bin/kc.sh build
 FROM quay.io/keycloak/keycloak:26.5
 
 COPY --from=builder /opt/keycloak/ /opt/keycloak/
+COPY ./create-kc-admin.sh /bin/
+COPY ./themes/ /opt/keycloak/themes/
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
