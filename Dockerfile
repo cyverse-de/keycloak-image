@@ -4,6 +4,9 @@ FROM quay.io/keycloak/keycloak:26.5 AS builder
 ENV KC_HEALTH_ENABLED=true
 ENV KC_METRICS_ENABLED=true
 
+# Add the `/auth` path prefix for compatibility with existing OIDC clients.
+ENV KC_HTTP_RELATIVE_PATH=/auth
+
 # Configure the database vendor.
 ENV KC_DB=postgres
 
