@@ -9,16 +9,8 @@ the `build` command to install them before starting the server.
 You are also able to create your custom themes in this directory, directly. Themes within this directory do not require
 the `build` command to be installed.
 
-When running the server in development mode using `start-dev`, themes are not cached so that you can easily work on them without a need to restart
-the server when making changes.
+When running the server in development mode using `start-dev`, themes are not cached so that you can easily work on them
+without a need to restart the server when making changes.
 
-See the theme section in the [Server Developer Guide](https://www.keycloak.org/docs/latest/server_development/#_themes) for more details about how to create custom themes.
-
-Overriding the built-in templates
----------------------------------
-
-While creating custom themes, especially when overriding templates, it may be useful to use the built-in templates as
-a reference. These can be found within the theme directory of `../lib/lib/main/org.keycloak.keycloak-themes-26.5.7.jar`, which can be opened using any
-standard ZIP archive tool.
-
-**Built-in themes should not be modified directly, instead a custom theme should be created.**
+See the theme section in the [Working With Themes](https://www.keycloak.org/ui-customization/themes) documentation for
+Keycloak for more details about how to create custom themes.
