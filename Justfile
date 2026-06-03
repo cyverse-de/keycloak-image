@@ -1,4 +1,4 @@
-repotag := "harbor.cyverse.org/de/keycloak:26.5"
+repotag := "harbor.cyverse.org/de/keycloak:26.6"
 
 build:
     docker buildx build --platform linux/amd64 -t "{{repotag}}" .
